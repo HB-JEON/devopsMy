@@ -10,10 +10,10 @@
     <div class="row">
  	  <div class="col-md-3" th:each="vo : ${list}">
         <div class="thumbnail">
-          <a th:href="@{/detail(fno = ${vo.fno}) }">
-            <img th:src=" 'https://www.menupan.com' + ${vo.poster} " style="width:230px; height: 130px;">
+          <a th:href="@{/detail(no = ${vo.no}) }">
+            <img th:src="${vo.img}" style="width:230px; height: 130px;">
             <div class="caption">
-              <p th:text="${vo.name}"></p>
+              <p th:text="${vo.title}"></p>
             </div>
           </a>
         </div>

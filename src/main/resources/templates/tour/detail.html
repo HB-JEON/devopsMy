@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.container {
+	margin-top: 50px;
+}
+.row {
+	margin: 0px auto;
+	width: 960px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <table class="table">
+        <tr>
+          <td class="text-center" colspan="2">
+            <img th:src="${vo.img}">
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" style="text-align: center; font-size: 20px;">[[${vo.title}]]</th>
+        </tr>
+        <tr>
+          <th width="20%" class="text-center">주소</th>
+          <td width="80%" class="text-center">[[${vo.addr}]]</td>
+        </tr>
+        <tr>
+          <td colspan="2">[[${vo.overview}]]</td>
+        </tr>
+      </table>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td class="text-right">
+              <input type="button" class="btn-sm btn-primary" onclick="javascript:history.back()" value="목록">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
